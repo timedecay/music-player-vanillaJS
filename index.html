@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music-player-vanilla</title>
+    
+    <link
+      rel="shortcut icon"
+      href="/image/music_player_sign_musical_note_icon_123811.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link
+      rel="stylesheet"
+      href="fontawesome-free-5.12.1-web/css/all.css"
+      type="text/css"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="class-player-container">
+      <!----------- 封面 ----------->
+      <div class="class-player-top">
+        <img
+          class="player-album-cover"
+          src="/image/pexels-george-becker-112989-square.jpg"
+          alt=""
+        />
+      </div>
+
+      <!-------- 进度条和歌名 --------->
+      <div class="class-range-slider">
+        <div class="class-slide-outer">
+          <div class="class-slide-inner"></div>
+        </div>
+      </div>
+      <div class="class-music-timer">
+        <span id="id-music-current">00:00</span>
+        <span id="id-music-duration">00:00</span>
+      </div>
+
+      <audio
+        id="id-music-player"
+        src="audio/Bach Air on the G String from Orchestral Suite No. 3 in D major, BWV 1068.mp3"
+      ></audio>
+      <div id="id-div-music">
+        <div class="class-music-list">
+          <h5 id="id-title">
+            Bach Air on the G String from Orchestral Suite No. 3 in D major, BWV
+            1068
+          </h5>
+        </div>
+      </div>
+
+      <!----------- 控制面板 ----------->
+      <div class="class-player-control">
+        <ul class="ctrl-btn-list">
+          <button
+            id="id-button-prev"
+            class="fas fa-step-backward"
+            name="prev"
+          ></button>
+          <button
+            id="id-button-play"
+            class="play-control fas fa-play"
+            name="playControl"
+          ></button>
+          <button
+            id="id-button-next"
+            class="fas fa-step-forward"
+            name="next"
+          ></button>
+        </ul>
+      </div>
+
+      <!------------- 底栏 ------------>
+      <div class="class-player-footer">
+        <ul>
+          <li>
+            <span id="id-button-favor" class="far fa-heart fa-sm"></span>
+          </li>
+
+          <li>
+            <span id="id-button-random" class="fas fa-random fa-sm"></span>
+          </li>
+
+          <li>
+            <span id="id-button-undo" class="fas fa-undo-alt fa-sm"></span>
+          </li>
+
+          <li>
+            <span
+              id="id-button-ellipsis"
+              class="fas fa-ellipsis-h fa-sm"
+            ></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
